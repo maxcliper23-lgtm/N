@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Princess, My Wifey, My Love 💕</title>
+  <style>
+    body {
+      background: #ffe6f0;
+      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #ff007f;
+    }
+    h2 {
+      font-size: 1.2rem;
+      color: #555;
+    }
+    .timer {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .box {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+      min-width: 80px;
+    }
+    .box h3 {
+      margin: 0;
+      font-size: 2rem;
+      color: #ff007f;
+    }
+    .box span {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    #letter {
+      display: none;
+      margin-top: 3rem;
+      font-size: 1.2rem;
+      white-space: pre-wrap;
+      animation: typing 4s steps(80) 1 normal both;
+    }
+    @keyframes typing {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>My Princess, My Wifey, My Love 💕</h1>
+  <h2>Something special is coming up...</h2>
+
+  <div class="timer">
+    <div class="box">
+      <h3 id="days">00</h3>
+      <span>Days</span>
+    </div>
+    <div class="box">
+      <h3 id="hours">00</h3>
+      <span>Hours</span>
+    </div>
+    <div class="box">
+      <h3 id="minutes">00</h3>
+      <span>Minutes</span>
+    </div>
+    <div class="box">
+      <h3 id="seconds">00</h3>
+      <span>Seconds</span>
+    </div>
+  </div>
+
+  <div id="letter">
+To My Guddu, My Princess, My Everything,
+
+Jab se tu meri life mein aayi hai na, sab kuch ekdum magical lagne laga hai.
+You are not just my love — you are my safest place, my strongest reason, and my forever person.
+
+Tere bina subah adhuri lagti hai, aur tere bina raat sooni.
+You’re the smile I wait to see, the laugh I live to hear, and the soul I’ve been searching for forever.
+
+Aaj tera birthday hai, but sach bataun... the biggest celebration is having you in my life.
+Tu meri life ki sabse pyaari blessing hai — ek aisi gift jo bhagwan ne sirf mere liye bheji.
+
+Main har waqt sirf yahi chahta hoon ki teri aankhon mein kabhi aansu na ho,
+teri zindagi mein kabhi kami na ho,
+aur tere chehre pe hamesha meri wajah se muskaan bani rahe 💫
+
+Happy Birthday, Bishuu!
+Tu meri jaan hai, meri har heartbeat mein tu hai.
+Chahe duniya kuch bhi kahe, I will always choose you, stand by you, and love you endlessly.
+
+I promise, tujhe kabhi akela feel nahi hone dunga.
+Main sirf tera hoon — abhi bhi, aage bhi, har janam mein 💍
+
+You are my once in a lifetime kind of love.
+And today, I just want to say…
+
+> “Thank you for being born, Guddu.”
+Thank you for existing.
+Thank you for loving me.
+Thank you… for being you. 💖
+  </div>
+
+  <script>
+    const countdownDate = new Date("July 25, 2025 09:15:00").getTime();
+
+    const updateTimer = () => {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+
+      if (distance <= 0) {
+        document.querySelector(".timer").style.display = "none";
+        document.getElementById("letter").style.display = "block";
+        clearInterval(x);
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = days.toString().padStart(2, '0');
+      document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+      document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+      document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+    };
+
+    const x = setInterval(updateTimer, 1000);
+    updateTimer();
+  </script>
+</body>
+</html>
